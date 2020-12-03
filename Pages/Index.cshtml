@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Tournament Application</h1>
+    <p>Tournament Application for fighting games</p>
+</div>
+
+<div class="card-columns">
+	@foreach (var game in Model.Games)
+	{
+	<div class="card">
+		<div class="card-img" style="background-image: url('@game.Image');"></div>
+		<div class="card-body">
+			<h5 class="card-title">@game.Title</h5>
+		</div>
+		
+	</div>
+	}
+</div>
