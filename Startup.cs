@@ -9,6 +9,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text.Json;
+using TournamentApplication.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace TournamentApplication
 {
@@ -25,6 +28,7 @@ namespace TournamentApplication
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddControllers();
             services.AddTransient<JsonFileGamesService>();
         }
 
@@ -52,6 +56,13 @@ namespace TournamentApplication
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapControllers();
+                //endpoints.MapGet("/games", (context) =>
+                //{
+                //    var games = app.ApplicationServices.GetService<JsonFileGamesService>().GetGames();
+                //    var json = JsonSerializer.Serialize<IEnumerable<Game>>(games);
+                //    return context.Response.WriteAsync(json);
+                //});
             });
         }
     }

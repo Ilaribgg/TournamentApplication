@@ -1,6 +1,6 @@
 ﻿[
 	{
-		"id": "tekken7",
+		"id": "0",
 		"publisher": "Bandai Namco",
 		"img": "https://image.api.playstation.com/cdn/EP0700/CUSA06014_00/60LMXmTtlbr3RwGglLc9awmBpcFRCC5S.png",
 		"url": "https://store.playstation.com/fi-fi/product/EP0700-CUSA06014_00-PS4TEKKEN7000001",
@@ -8,7 +8,7 @@
 		"desrcription": "3D Fighting Game"
 	},
 	{
-		"id": "ggrev2",
+		"id": "1",
 		"publisher": "Arcsys",
 		"img": "https://image.api.playstation.com/cdn/EP4293/CUSA04759_00/1tGYAMkHGZ8pfpZsH2VRPRoOg1fUgPUv.png",
 		"url": "https://store.playstation.com/fi-fi/product/EP4293-CUSA04759_00-GGXRDDAT000B6000",
@@ -16,7 +16,7 @@
 		"desrcription": "2D Fighting Game"
 	},
 	{
-		"id": "sfv",
+		"id": "2",
 		"publisher": "Capcom",
 		"img": "https://image.api.playstation.com/vulcan/img/cfn/11307onAazmXEWGmaLw3fQ7HOSP8ouLql35uFOqJaiND6nLokIIjICjTQ_GVXkazp3efAv7onxA4mzEQY02eemvOemopGC2q.png",
 		"url": "https://store.playstation.com/fi-fi/product/EP0102-CUSA01222_00-SFVCE00000000000",
