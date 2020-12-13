@@ -35,3 +35,12 @@ C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debu
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\TournamentApplication.pdb
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\TournamentApplication.genruntimeconfig.cache
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\TournamentApplication.csproj.CopyComplete
+C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\TournamentApplication.RazorComponent.input.cache
+C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\GameList.razor.g.cs
+C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\TournamentApplication.RazorComponent.output.cache
+C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\RazorDeclaration\TournamentApplication.dll
+C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\Razor\Components\GameList.razor.g.cs
+C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\Razor\Pages\GameInfo.cshtml.g.cs
+C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\Tournaments.razor.g.cs
+C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\Razor\Components\Tournaments.razor.g.cs
+C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\Razor\Pages\Tournaments.cshtml.g.cs

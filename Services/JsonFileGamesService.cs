@@ -20,6 +20,10 @@ namespace TournamentApplication.Services
         {
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "games.json"); }
         }
+        private string JsonFileNameTournament
+        {
+            get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "tournaments.json"); }
+        }
 
         public IEnumerable<Game> GetGames()
         {
@@ -32,5 +36,19 @@ namespace TournamentApplication.Services
                     });
             }
         }
+            public IEnumerable<Tournament> GetTournaments()
+            {
+                using (var jsonFileReader = File.OpenText(JsonFileNameTournament))
+                {
+                    return JsonSerializer.Deserialize<Tournament[]>(jsonFileReader.ReadToEnd(),
+                        new JsonSerializerOptions
+                        {
+                            PropertyNameCaseInsensitive = true
+                        });
+                }
+            }
+        }
     }
-}
+
+    
+

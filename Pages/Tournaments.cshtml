@@ -1,0 +1,10 @@
+﻿@page
+@model TournamentApplication.Pages.TournamentsListModel
+
+@using TournamentApplication.Components
+
+<h3>Tournaments</h3>
+
+@(await Html.RenderComponentAsync<Tournaments>(RenderMode.ServerPrerendered))
+
+<script src="framework/blazor.server.js"></script>

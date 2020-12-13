@@ -1,5 +1,6 @@
 ﻿@page
 @model IndexModel
+@using TournamentApplication.Components
 @{
     ViewData["Title"] = "Home page";
 }
@@ -9,15 +10,7 @@
     <p>Tournament Application for fighting games</p>
 </div>
 
-<div class="card-columns">
-	@foreach (var game in Model.Games)
-	{
-	<div class="card">
-		<div class="card-img" style="background-image: url('@game.Image');"></div>
-		<div class="card-body">
-			<h5 class="card-title">@game.Title</h5>
-		</div>
-		
-	</div>
-	}
-</div>
+@(await Html.RenderComponentAsync<GameList>(RenderMode.ServerPrerendered))
+
+<script src ="framework/blazor.server.js"></script>
+

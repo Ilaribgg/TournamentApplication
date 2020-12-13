@@ -1,0 +1,31 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@using TournamentApplication.Models
+@using TournamentApplication.Services
+@page "/tournaments"
+@inject JsonFileGamesService TournamentsService
+<h1>Tournament list</h1>
+
+<div class="card-columns">
+    @foreach (var tournament in TournamentsService.GetTournaments())
+    {
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">@tournament.TournamentTitle</h5>
+                <div class="card-footer">
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    Tournament selectTournament;
+    string selectTournamentId;
+
+    void SelectTournament(string tournamentId)
+    {
+        selectTournamentId = tournamentId;
+        selectTournament = TournamentsService.GetTournaments().First(x => x.Id == tournamentId);
+    }
+}
+

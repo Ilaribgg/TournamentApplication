@@ -1,0 +1,43 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@using TournamentApplication.Models
+@using TournamentApplication.Services
+@inject JsonFileGamesService GamesService
+@page "/gamelist"
+
+<h3>GameList</h3>
+
+<div class="card-columns">
+    @foreach (var game in GamesService.GetGames())
+    {
+        <div class="card">
+            <div class="card-img" style="background-image: url('@game.Image');"></div>
+            <div class="card-body">
+                <h5 class="card-title">@game.Title</h5>
+                <div class="card-footer">
+                    <small class="text-muted">
+                        <button @onclick="(e => SelectGame(game.Id))"
+                                data-toggle="modal" data-target="#gameModal" class="btn btn-primary">
+                            More info
+                        </button>
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">
+                <a href="/tournaments" class="button">Go to google</a>
+            </small>
+        </div>
+    }
+</div>
+
+@code {
+    Game selectGame;
+    string selectGameId;
+
+    void SelectGame(string gameId)
+    {
+        selectGameId = gameId;
+        selectGame = GamesService.GetGames().First(x => x.Id == gameId);
+    }
+}

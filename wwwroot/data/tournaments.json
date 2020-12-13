@@ -1,0 +1,14 @@
+[
+
+    {
+        "tournamentId": 0,
+        "tournamentTitle": "Test tournament",
+        "tournamentInfo": "First to 3, single elimination"
+    },
+    {
+        "tournamentId": 1,
+        "tournamentInfo": "First to 3, single elimination",
+        "tournamentTitle": "Test tournament 2"
+    }
+
+]

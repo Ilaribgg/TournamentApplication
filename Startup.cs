@@ -28,8 +28,10 @@ namespace TournamentApplication
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddServerSideBlazor();
             services.AddControllers();
             services.AddTransient<JsonFileGamesService>();
+            services.AddRouting();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,12 +59,14 @@ namespace TournamentApplication
             {
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
-                //endpoints.MapGet("/games", (context) =>
-                //{
-                //    var games = app.ApplicationServices.GetService<JsonFileGamesService>().GetGames();
-                //    var json = JsonSerializer.Serialize<IEnumerable<Game>>(games);
-                //    return context.Response.WriteAsync(json);
-                //});
+                endpoints.MapBlazorHub();
+
+                endpoints.MapGet("/games", (context) =>
+                {
+                    var games = app.ApplicationServices.GetService<JsonFileGamesService>().GetGames();
+                    var json = JsonSerializer.Serialize<IEnumerable<Game>>(games);
+                    return context.Response.WriteAsync(json);
+                });
             });
         }
     }
