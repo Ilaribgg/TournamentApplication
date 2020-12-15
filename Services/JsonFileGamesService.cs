@@ -23,6 +23,11 @@ namespace TournamentApplication.Services
         private string JsonFileNameTournament
         {
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "tournaments.json"); }
+            set => Path.Combine(WebHostEnvironment.WebRootPath, "data", "tournaments.json");
+        }
+        private string JsonFileNamePlayer
+        {
+            get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "players.json"); }
         }
 
         public IEnumerable<Game> GetGames()
@@ -36,19 +41,31 @@ namespace TournamentApplication.Services
                     });
             }
         }
-            public IEnumerable<Tournament> GetTournaments()
+        public IEnumerable<Tournament> GetTournaments()
+        {
+            using (var jsonFileReader = File.OpenText(JsonFileNameTournament))
             {
-                using (var jsonFileReader = File.OpenText(JsonFileNameTournament))
-                {
-                    return JsonSerializer.Deserialize<Tournament[]>(jsonFileReader.ReadToEnd(),
-                        new JsonSerializerOptions
-                        {
-                            PropertyNameCaseInsensitive = true
-                        });
-                }
+                return JsonSerializer.Deserialize<Tournament[]>(jsonFileReader.ReadToEnd(),
+                    new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
+            }
+        }
+        public IEnumerable<Player> GetPlayers()
+        {
+            using (var jsonFileReader = File.OpenText(JsonFileNamePlayer))
+            {
+                return JsonSerializer.Deserialize<Player[]>(jsonFileReader.ReadToEnd(),
+                    new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
             }
         }
     }
+}
+
 
     
 

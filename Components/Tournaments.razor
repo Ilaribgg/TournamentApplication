@@ -18,14 +18,4 @@
     }
 </div>
 
-@code {
-    Tournament selectTournament;
-    string selectTournamentId;
-
-    void SelectTournament(string tournamentId)
-    {
-        selectTournamentId = tournamentId;
-        selectTournament = TournamentsService.GetTournaments().First(x => x.Id == tournamentId);
-    }
-}
 

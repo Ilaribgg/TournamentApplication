@@ -28,6 +28,7 @@ namespace TournamentApplication
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddMvc();
             services.AddServerSideBlazor();
             services.AddControllers();
             services.AddTransient<JsonFileGamesService>();
@@ -50,17 +51,13 @@ namespace TournamentApplication
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
                 endpoints.MapBlazorHub();
-
                 endpoints.MapGet("/games", (context) =>
                 {
                     var games = app.ApplicationServices.GetService<JsonFileGamesService>().GetGames();

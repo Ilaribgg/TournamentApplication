@@ -41,21 +41,6 @@ using TournamentApplication.Services;
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 21 "C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\Components\Tournaments.razor"
-       
-    Tournament selectTournament;
-    string selectTournamentId;
-
-    void SelectTournament(string tournamentId)
-    {
-        selectTournamentId = tournamentId;
-        selectTournament = TournamentsService.GetTournaments().First(x => x.Id == tournamentId);
-    }
-
-#line default
-#line hidden
-#nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private JsonFileGamesService TournamentsService { get; set; }
     }
 }
