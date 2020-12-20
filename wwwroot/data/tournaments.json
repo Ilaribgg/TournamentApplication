@@ -1,12 +1,12 @@
 [
 
     {
-        "id": "tournament1",
+        "id": 0,
         "tournamentTitle": "Test tournament",
         "tournamentInfo": "First to 3, single elimination"
     },
     {
-        "id": "tournament2",
+        "id": 1,
         "tournamentInfo": "First to 3, single elimination",
         "tournamentTitle": "Test tournament 2"
     }

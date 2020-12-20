@@ -1,0 +1,126 @@
+﻿@page
+@model TournamentApplication.Pages.TournamentsListModel
+
+@using TournamentApplication.Components
+@using TournamentApplication.Models
+
+<div class="container row p-0 m-0">
+    <div class="col-9">
+        <h2 class="text-info">Tournaments</h2>
+    </div>
+    <div class="col-3">
+        <a class="btn btn-info form-control text-white">New tournament</a>
+    </div>
+
+    <div class="col-12 border p-3 mt-3">
+        <form method="post">
+            @if (Model.Tournaments.Count() > 0)
+            {
+                <table class="table table-striped border">
+                    <tr class="table-secondary">
+                        <th>
+                            <label asp-for="Tournaments.FirstOrDefault().TournamentTitle"></label>
+                        </th>
+                        <th>
+                            @*@Html.DisplayNameFor(m => m.Tournaments.FirstOrDefault().TournamentTitle)*@
+                            <label asp-for="Tournaments.FirstOrDefault().TournamentInfo"></label>
+                        </th>
+                        <th>
+
+                        </th>
+                    </tr>
+                    @foreach (var item in Model.Tournaments)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(m => item.TournamentTitle)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => item.TournamentInfo)
+                            </td>
+                            <td>
+                                <button class="btn btn-danger btn-sm">Delete</button>
+                                <a class="btn btn-success btn-sm text-white">Edit</a>
+                            </td>
+                        </tr>
+                    }
+                </table>
+            }
+            else
+            {
+                <p>No tournaments</p>
+            }
+        </form>
+    </div>
+</div>
+
+@*@if (Model == null)
+    {
+        <p>No tournaments</p>
+    }
+    else
+    {
+        <p>Haha yes tournament</p>
+    }
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            @using (Html.BeginForm())
+            {
+                <div class="form-group">
+                    @Html.LabelFor(x => x.TournamentTitle)
+                    @Html.TextBoxFor(x => x.TournamentTitle, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(x => x.TournamentInfo)
+                    @Html.TextBoxFor(x => x.TournamentInfo, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <button id="btnSubmitJson" type="submit" class="btn btn-default">Submit</button>
+                </div>
+            }
+        </div>
+    </div>
+
+    @section scripts
+    {
+        <script type="text/javascript">
+
+        $('#btnSubmitJson').click(function () {
+            var title = $('#@Html.IdFor(x => x.TournamentTitle)').val();
+            var info = $('#@Html.IdFor(x => x.TournamentInfo)').val();
+            var data = title + " " +  info;
+            console.log("data: " + data);
+        postToController(JSON.stringify(data), "application/json; charset=utf-8");
+
+        return false;
+        });
+        </script>
+        <script type="text/javascript">
+
+            function postToController(data, dataType) {
+                console.log('submitting...');
+                $.ajax({
+                    type: 'POST',
+                    url: 'api/tournaments/',
+                    dataType: 'json',
+                    contentType: dataType,
+                    data: data,
+                    success: function (result) {
+                        console.log('success...')
+                        console.log(result);
+                    },
+                    failure: function (errMsg) {
+                        alert(errMsg);
+                    }
+                });
+            }
+
+
+        </script>
+        <script src="framework/blazor.server.js"></script>
+
+    }
+
+    @(await Html.RenderComponentAsync<Tournaments>(RenderMode.ServerPrerendered))*@
+

@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Text.Json;
 using TournamentApplication.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 
 namespace TournamentApplication
 {
@@ -27,7 +28,8 @@ namespace TournamentApplication
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            services.AddDbContext<ApplicationDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddRazorPages().AddRazorRuntimeCompilation();
             services.AddMvc();
             services.AddServerSideBlazor();
             services.AddControllers();
