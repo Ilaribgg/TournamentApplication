@@ -23,5 +23,17 @@ namespace TournamentApplication.Pages
         {
             Tournaments = await _db.Tournament.ToListAsync();
         }
+        public async Task<IActionResult> OnPostDelete(int id)
+        {
+            var tournament = await _db.Tournament.FindAsync(id);
+            if(tournament == null)
+            {
+                return NotFound();
+            }
+            _db.Tournament.Remove(tournament);
+            await _db.SaveChangesAsync();
+
+            return RedirectToPage("Tournaments");
+        }
     }
 }
