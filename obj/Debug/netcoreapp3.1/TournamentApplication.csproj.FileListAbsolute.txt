@@ -380,3 +380,5 @@ C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\bin\Debu
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Options.dll
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Primitives.dll
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\Razor\Pages\TournamentList\Tournaments.cshtml.g.cs
+C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\Razor\Pages\TournamentList\Create.cshtml.g.cs
+C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\Razor\Pages\TournamentList\Edit.cshtml.g.cs

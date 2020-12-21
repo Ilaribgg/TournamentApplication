@@ -9,42 +9,56 @@
         <h2 class="text-info">Tournaments</h2>
     </div>
     <div class="col-3">
-        <a class="btn btn-info form-control text-white">New tournament</a>
+        <a asp-page="Create"class="btn btn-info form-control text-white">New tournament</a>
     </div>
 
     <div class="col-12 border p-3 mt-3">
         <form method="post">
             @if (Model.Tournaments.Count() > 0)
             {
-                <table class="table table-striped border">
-                    <tr class="table-secondary">
-                        <th>
-                            <label asp-for="Tournaments.FirstOrDefault().TournamentTitle"></label>
-                        </th>
-                        <th>
-                            @*@Html.DisplayNameFor(m => m.Tournaments.FirstOrDefault().TournamentTitle)*@
-                            <label asp-for="Tournaments.FirstOrDefault().TournamentInfo"></label>
-                        </th>
-                        <th>
+            <table class="table table-striped border">
+                <tr class="table-secondary">
+                    <th>
+                        <label asp-for="Tournaments.FirstOrDefault().TournamentTitle">Title</label>
+                    </th>
+                    <th>
+                        @*@Html.DisplayNameFor(m => m.Tournaments.FirstOrDefault().TournamentTitle)*@
+                        <label asp-for="Tournaments.FirstOrDefault().TournamentInfo">Info</label>
+                    </th>
+                    <th>
+                        @*@Html.DisplayNameFor(m => m.Tournaments.FirstOrDefault().TournamentTitle)*@
+                        <label asp-for="Tournaments.FirstOrDefault().TournamentType">Type</label>
+                    </th>
+                    <th>
+                        @*@Html.DisplayNameFor(m => m.Tournaments.FirstOrDefault().TournamentTitle)*@
+                        <label asp-for="Tournaments.FirstOrDefault().PlayerAmount">Players</label>
+                    </th>
+                    <th>
 
-                        </th>
-                    </tr>
-                    @foreach (var item in Model.Tournaments)
-                    {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(m => item.TournamentTitle)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(m => item.TournamentInfo)
-                            </td>
-                            <td>
-                                <button class="btn btn-danger btn-sm">Delete</button>
-                                <a class="btn btn-success btn-sm text-white">Edit</a>
-                            </td>
-                        </tr>
-                    }
-                </table>
+                    </th>
+                </tr>
+                @foreach (var item in Model.Tournaments)
+                {
+            <tr>
+                <td>
+                    @Html.DisplayFor(m => item.TournamentTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.TournamentInfo)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.TournamentType)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.PlayerAmount)
+                </td>
+                <td>
+                    <button class="btn btn-danger btn-sm">Delete</button>
+                    <a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-success btn-sm text-white">Edit</a>
+                </td>
+            </tr>
+                }
+            </table>
             }
             else
             {
