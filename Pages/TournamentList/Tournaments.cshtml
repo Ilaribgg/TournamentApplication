@@ -66,75 +66,31 @@
             }
         </form>
     </div>
-</div>
-
-@*@if (Model == null)
-    {
-        <p>No tournaments</p>
-    }
-    else
-    {
-        <p>Haha yes tournament</p>
-    }
-
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            @using (Html.BeginForm())
-            {
-                <div class="form-group">
-                    @Html.LabelFor(x => x.TournamentTitle)
-                    @Html.TextBoxFor(x => x.TournamentTitle, new { @class = "form-control" })
-                </div>
-                <div class="form-group">
-                    @Html.LabelFor(x => x.TournamentInfo)
-                    @Html.TextBoxFor(x => x.TournamentInfo, new { @class = "form-control" })
-                </div>
-                <div class="form-group">
-                    <button id="btnSubmitJson" type="submit" class="btn btn-default">Submit</button>
-                </div>
-            }
-        </div>
+    <div class="col-12" style="text-align:center">
+        <br/>
+        <span class="h3 text-info">OR</span>
+        <br/><br/>
     </div>
+    <div class="col-12 border p-3">
 
-    @section scripts
-    {
-        <script type="text/javascript">
-
-        $('#btnSubmitJson').click(function () {
-            var title = $('#@Html.IdFor(x => x.TournamentTitle)').val();
-            var info = $('#@Html.IdFor(x => x.TournamentInfo)').val();
-            var data = title + " " +  info;
-            console.log("data: " + data);
-        postToController(JSON.stringify(data), "application/json; charset=utf-8");
-
-        return false;
-        });
-        </script>
-        <script type="text/javascript">
-
-            function postToController(data, dataType) {
-                console.log('submitting...');
-                $.ajax({
-                    type: 'POST',
-                    url: 'api/tournaments/',
-                    dataType: 'json',
-                    contentType: dataType,
-                    data: data,
-                    success: function (result) {
-                        console.log('success...')
-                        console.log(result);
-                    },
-                    failure: function (errMsg) {
-                        alert(errMsg);
-                    }
-                });
-            }
+        <table id="DT_load" class="table table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Information</th>
+                    <th>Type</th>
+                    <th>Max players</th>
+                    <th></th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+@section Scripts {
+<script src="~/js/tournamentList.js"></script>
+}
 
 
-        </script>
-        <script src="framework/blazor.server.js"></script>
 
-    }
-
-    @(await Html.RenderComponentAsync<Tournaments>(RenderMode.ServerPrerendered))*@
+ @*@(await Html.RenderComponentAsync<Tournaments>(RenderMode.ServerPrerendered))*@
 

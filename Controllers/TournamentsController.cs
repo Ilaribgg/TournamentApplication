@@ -2,29 +2,42 @@
 using System.Collections.Generic;
 using TournamentApplication.Services;
 using TournamentApplication.Models;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace TournamentApplication.Controllers
 {
-    [Route("api/Tournaments")]
+    [Route("api/Tournament")]
     [ApiController]
-    public class TournamentsController : ControllerBase
+    public class TournamentsController : Controller
     {
-        public TournamentsController(JsonFileGamesService tournamentService)
+        private readonly ApplicationDbContext _db;
+
+        public TournamentsController(ApplicationDbContext db)
         {
-            this.TournamentsService = tournamentService;
+            _db = db;
         }
-        public JsonFileGamesService TournamentsService { get; set; }
 
         [HttpGet]
-        public IEnumerable<Tournament> Get()
+        public async Task<IActionResult> GetAll()
         {
-            return TournamentsService.GetTournaments();
+            return Json(new { data = await _db.Tournament.ToListAsync() });
         }
-        [HttpPost]
-        public Tournament Index(Tournament tournament)
+        [HttpDelete]
+        public async Task<IActionResult> Delete(int id)
         {
-            return tournament;
+            var tournamentFromDb = _db.Tournament.FirstOrDefault(u => u.Id == id);
+            if(tournamentFromDb == null)
+            {
+                return Json(new { success = false, message = "Error while deleting" });
+            }
+                _db.Tournament.Remove(tournamentFromDb);
+                await _db.SaveChangesAsync();
+                return Json(new { success = true, message = "delete succesful" });
+
         }
+
 
     }
 }
