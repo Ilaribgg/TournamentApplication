@@ -1,4 +1,3 @@
-using TournamentApplication.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,7 +33,6 @@ namespace TournamentApplication
             services.AddMvc();
             services.AddServerSideBlazor();
             services.AddControllers();
-            services.AddTransient<JsonFileGamesService>();
             services.AddRouting();
         }
 
@@ -61,12 +59,6 @@ namespace TournamentApplication
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
                 endpoints.MapBlazorHub();
-                endpoints.MapGet("/games", (context) =>
-                {
-                    var games = app.ApplicationServices.GetService<JsonFileGamesService>().GetGames();
-                    var json = JsonSerializer.Serialize<IEnumerable<Game>>(games);
-                    return context.Response.WriteAsync(json);
-                });
             });
         }
     }

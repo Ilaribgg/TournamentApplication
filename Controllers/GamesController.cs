@@ -1,11 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using TournamentApplication.Models;
-using TournamentApplication.Services;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
+using System;
 
 namespace TournamentApplication.Controllers
 {
@@ -13,17 +12,33 @@ namespace TournamentApplication.Controllers
     [ApiController]
     public class GamesController : ControllerBase
     {
-        public GamesController(JsonFileGamesService gameService)
+        private readonly ApplicationDbContext _db;
+        public GamesController(ApplicationDbContext db)
         {
-            this.GamesService = gameService;
+            _db = db;
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            return Json(new { data = await _db.Game.ToListAsync() });
+        }
+        [HttpDelete]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var gameFromDb = _db.Game.FirstOrDefault(u => u.GameId == id);
+            if (gameFromDb == null)
+            {
+                return Json(new { success = false, message = "Error while deleting" });
+            }
+            _db.Game.Remove(gameFromDb);
+            await _db.SaveChangesAsync();
+            return Json(new { success = true, message = "delete succesful" });
+
         }
 
-        public JsonFileGamesService GamesService { get; }
-
-        [HttpGet]
-        public IEnumerable<Game> Get()
+        private IActionResult Json(object p)
         {
-            return GamesService.GetGames();
+            throw new NotImplementedException();
         }
     }
 }

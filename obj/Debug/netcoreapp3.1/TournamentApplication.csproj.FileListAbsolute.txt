@@ -35,14 +35,7 @@ C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debu
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\TournamentApplication.pdb
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\TournamentApplication.genruntimeconfig.cache
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\TournamentApplication.csproj.CopyComplete
-C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\TournamentApplication.RazorComponent.input.cache
-C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\GameList.razor.g.cs
-C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\TournamentApplication.RazorComponent.output.cache
-C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\RazorDeclaration\TournamentApplication.dll
-C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\Razor\Components\GameList.razor.g.cs
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\Razor\Pages\GameInfo.cshtml.g.cs
-C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\Tournaments.razor.g.cs
-C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\Razor\Components\Tournaments.razor.g.cs
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Antiforgery.dll
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Cookies.dll
@@ -382,3 +375,5 @@ C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\bin\Debu
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\Razor\Pages\TournamentList\Tournaments.cshtml.g.cs
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\Razor\Pages\TournamentList\Create.cshtml.g.cs
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\Razor\Pages\TournamentList\Edit.cshtml.g.cs
+C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\Razor\Pages\GameList\Games.cshtml.g.cs
+C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\Razor\Pages\GameList\UpsertGame.cshtml.g.cs

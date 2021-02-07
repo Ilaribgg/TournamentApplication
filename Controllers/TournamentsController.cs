@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using TournamentApplication.Services;
 using TournamentApplication.Models;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;

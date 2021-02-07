@@ -1,6 +1,5 @@
 ﻿@page
 @model IndexModel
-@using TournamentApplication.Components
 @{
     ViewData["Title"] = "Home page";
 }
@@ -10,7 +9,6 @@
     <p>Tournament Application for fighting games</p>
 </div>
 
-@(await Html.RenderComponentAsync<GameList>(RenderMode.ServerPrerendered))
 
 <script src="framework/blazor.server.js"></script>
 
