@@ -15,5 +15,6 @@ namespace TournamentApplication.Models
 
         public DbSet<Tournament> Tournament { get; set; }
         public DbSet<Game> Game { get; set; }
+        public DbSet<Player> Player { get; set; }
     }
 }

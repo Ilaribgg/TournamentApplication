@@ -17,7 +17,8 @@ namespace TournamentApplication.Models
         public string TournamentInfo { get; set; }
         public string TournamentType { get; set; }
         public int PlayerAmount { get; set; }
-
-        //public override string ToString() => JsonSerializer.Serialize<Tournament>(this);
+        //public Game Game { get; set; }
+        public string Title { get; set; }
     }
+
 }

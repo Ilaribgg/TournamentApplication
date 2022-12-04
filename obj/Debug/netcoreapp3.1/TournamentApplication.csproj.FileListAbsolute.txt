@@ -8,7 +8,6 @@ C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\bin\Debu
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\bin\Debug\netcoreapp3.1\TournamentApplication.pdb
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\bin\Debug\netcoreapp3.1\TournamentApplication.Views.dll
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\bin\Debug\netcoreapp3.1\TournamentApplication.Views.pdb
-C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\TournamentApplication.csprojAssemblyReference.cache
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\TournamentApplication.AssemblyInfoInputs.cache
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\TournamentApplication.AssemblyInfo.cs
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\TournamentApplication.csproj.CoreCompileInputs.cache
@@ -16,8 +15,6 @@ C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debu
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\TournamentApplication.RazorAssemblyInfo.cache
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\TournamentApplication.RazorAssemblyInfo.cs
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\staticwebassets\TournamentApplication.StaticWebAssets.Manifest.cache
-C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\staticwebassets\TournamentApplication.StaticWebAssets.xml
-C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\scopedcss\bundle\TournamentApplication.styles.css
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\TournamentApplication.TagHelpers.input.cache
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\TournamentApplication.TagHelpers.output.cache
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\TournamentApplication.RazorCoreGenerate.cache
@@ -377,3 +374,5 @@ C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debu
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\Razor\Pages\TournamentList\Edit.cshtml.g.cs
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\Razor\Pages\GameList\Games.cshtml.g.cs
 C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\Razor\Pages\GameList\UpsertGame.cshtml.g.cs
+C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\TournamentApplication.csproj.AssemblyReference.cache
+C:\Users\ilari\source\repos\TournamentApplication\TournamentApplication\obj\Debug\netcoreapp3.1\TournamentApplication.GeneratedMSBuildEditorConfig.editorconfig

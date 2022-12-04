@@ -11,11 +11,11 @@
             <div class="col-2">
                 <label asp-for="Tournament.TournamentTitle">Tournament title</label>
             </div>
-                <div class="col-6">
-                    <input asp-for="Tournament.TournamentTitle" class="form-control" />
-                </div>
-            <span asp-validation-for="Tournament.TournamentTitle" class="text-danger"></span>
+            <div class="col-6">
+                <input asp-for="Tournament.TournamentTitle" class="form-control" />
             </div>
+            <span asp-validation-for="Tournament.TournamentTitle" class="text-danger"></span>
+        </div>
         <div class="form-group row">
             <div class="col-2">
                 <label asp-for="Tournament.TournamentInfo">Tournament info</label>
@@ -25,25 +25,32 @@
             </div>
             <span asp-validation-for="Tournament.TournamentInfo" class="text-danger"></span>
         </div>
-            <div class="form-group row">
-                <div class="col-2">
-                    <label asp-for="Tournament.TournamentType">Tournament type</label>
-                </div>
-                <div class="col-6">
-                    <input asp-for="Tournament.TournamentType" class="form-control" />
-                </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Tournament.TournamentType">Tournament type</label>
             </div>
-            <div class="form-group row">
-                <div class="col-2">
-                    <label asp-for="Tournament.PlayerAmount">Max players</label>
-                </div>
+            <div class="col-6">
+                <input asp-for="Tournament.TournamentType" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Tournament.PlayerAmount">Max players</label>
+            </div>
             <div class="col-2">
                 <input asp-for="Tournament.PlayerAmount" class="form-control" />
             </div>
+        </div>
+@*        <div class="form-group row">
+            <div class="col-2">
+                <select asp-for="Tournament.Game.Title">
+                    <option>@Model.Game</option>
+                </select>
             </div>
+        </div>*@
         <div class="form-group row">
             <div class="col-2 offset-3">
-                <input type="submit" value="Add" class="btn btn-primary form-control"/>
+                <input type="submit" value="Add" class="btn btn-primary form-control" />
             </div>
             <div class="col-2">
                 <a asp-page="Tournaments" class="btn btn-success form-control">Back to list</a>
